@@ -11,7 +11,7 @@
                                 Select Relationship<span class="caret"></span>
                             </a>
 
-                            <ul class="dropdown-menu" role="menu">
+                            <ul class="dropdown-menu btn btn-default" role="menu" >
                                 <li><a href="{{ url('/customer') }}"><i class="glyphicon glyphicon-user"></i> Customers</a></li>
                                 <li><a href="{{ url('/products') }}"><i class="glyphicon glyphicon-gift"></i> Products</a></li>
                             </ul>                            

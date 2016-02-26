@@ -1,32 +1,6 @@
 @extends('crm')
 
 @section('content11')
-<!-- <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    category's
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="/category/electronics">customers who buy Electronics</a></li>
-    <li><a href="/category/toys">customers who buy  Toys</a></li>
-    <li><a href="/category/glasses">customers who buy  Glasses</a></li>
-    <li><a href="/category/pants">customers who buy  Pants</a></li>
-    <li><a href="/category/bags">customers who buy  Bags</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="/customer">All</a></li>
-  </ul>
-</div>
-<div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Select by Company
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="/company/sourceeasy">Sourceeasy</a></li>
-    <li><a href="/company/tripod">Tripod</a></li>
-    <li><a href="/company/mickey">Mickey</a></li>
-  </ul>
-</div><a href="/regular" class="btn btn-primary" style="align:right">Regular customers</a> -->
 <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">

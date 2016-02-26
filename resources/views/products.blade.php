@@ -2,21 +2,35 @@
 
 @section('content11')
 
-<div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    category's
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="/products1/electronics">Electronics</a></li>
-    <li><a href="/products1/toys">Toys</a></li>
-    <li><a href="/products1/glasses">Glasses</a></li>
-    <li><a href="/products1/pants">Pants</a></li>
-    <li><a href="/products1/bags">Bags</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="/products">All</a></li>
-  </ul>
-</div>
+<nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Categorys</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">            
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">search by category's <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/products1/electronics">Electronics</a></li>
+                <li><a href="/products1/toys">Toys</a></li>
+                <li><a href="/products1/glasses">Glasses</a></li>
+                <li><a href="/products1/pants">Pants</a></li>
+                <li><a href="/products1/bags">Bags</a></li>
+                <li role="separator" class="divider"></li>              
+                <li><a href="/products">display All</a></li>
+              </ul>
+            </li>            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
 <table class="table">
 	<tr>
