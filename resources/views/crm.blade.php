@@ -12,7 +12,7 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/customers') }}"><i class="glyphicon glyphicon-user"></i> Customers</a></li>
+                                <li><a href="{{ url('/customer') }}"><i class="glyphicon glyphicon-user"></i> Customers</a></li>
                                 <li><a href="{{ url('/products') }}"><i class="glyphicon glyphicon-gift"></i> Products</a></li>
                             </ul>                            
                         </div>

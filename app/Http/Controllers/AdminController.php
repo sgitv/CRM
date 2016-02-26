@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Customer as Customer;
 use App\Product as Product;
+use Carbon\Carbon;
 
 class AdminController extends Controller
 {
@@ -15,11 +16,48 @@ class AdminController extends Controller
     {
         $this->middleware('auth');
     }
-    public function customers()
+    public function customer()
     {
+        
+        
+
         // where('address','=','hyderabad')->
-        $customers = Customer::get();
-        return view('customers',compact('customers'));
+        // $products = Product::where('category','=','toys')->groupBy('customer_id')->get();
+        // $customers = [];
+        // for($i = 0 ; $i < count($products) ; $i++)
+        //  {
+        //     // $customers1 = Customer::where('id','=',$products[$i]->customer_id)->get();
+        //     array_push($customers,$products[$i]->customer_id);
+        //     // echo $products[$i]->customer_id.'<br >';
+
+        //  }
+        // $customers1 = Customer::whereIn('id', $customers)->get();
+
+          // foreach ($customers as $key) {
+          //      echo $key;
+          //  } 
+        // echo $length;
+        // $query = (SELECT customers.id,customers.name,customers.company,customers.email,customers.address,customers.phone,products.customer_id from customers,products where customers.id = products.customer_id);
+        // return view('customers',compact('customers'));
+         // echo $query;
+       
+        // $customers = Customer::get();
+         // echo $customers;
+        // $customer = $customers2[0];
+         // dd($customers1);
+        $customers1 = Customer::all();
+        return view('customers')->with('customers',$customers1);
+    }
+    public function toys()
+    {
+        $products = Product::where('category','=','toys')->groupBy('customer_id')->get();
+        $customers = [];
+        for($i = 0 ; $i < count($products) ; $i++)
+         {       
+            array_push($customers,$products[$i]->customer_id);
+         }
+        $customers1 = Customer::whereIn('id', $customers)->get();
+        return view('customers')->with('customers',$customers1);
     }
      public function products()
     {
@@ -55,7 +93,8 @@ class AdminController extends Controller
         'name' => $_POST['name'],
         'email' => $_POST['email'],
         'address' => $_POST['address'],
-        'phone' => $_POST['phone']
+        'phone' => $_POST['phone'],
+        'company'=> $_POST['company']
         ];
         Customer::create($customer);
         return redirect('customers');
@@ -71,7 +110,8 @@ class AdminController extends Controller
         $createProdct= [
         'name' => $_POST['name'],
         'customer_id' => $_POST['customer_id'],
-        'price' => $_POST['price']        
+        'price' => $_POST['price'],        
+        'category' => $_POST['category']
         ];
         Product::create($createProdct);
         return redirect('products');
@@ -87,7 +127,8 @@ class AdminController extends Controller
         $updateProduct = [
         'name' => $_POST['name'],
         'customer_id' => $_POST['customer_id'],
-        'price' => $_POST['price']
+        'price' => $_POST['price'],
+        'category' => $_POST['category']
         
         ];
         Product::find($id)->update($updateProduct);
@@ -100,5 +141,102 @@ class AdminController extends Controller
         return redirect('products');
         
     }
-    // deleteProduct
+    public function createProdctForCustomer()
+    {
+        $updateProduct = [
+        'name' => $_POST['name'],
+        'customer_id' => $_POST['customer_id'],
+        'price' => $_POST['price'],
+        'category' => $_POST['category']
+        
+        ];
+        Product::create($updateProduct);
+        return redirect('products');        
+    }
+    public function electronics()
+    {
+        $products = Product::where('category','=','electronics')->groupBy('customer_id')->get();
+        $customers = [];
+        for($i = 0 ; $i < count($products) ; $i++)
+         {
+            array_push($customers,$products[$i]->customer_id);
+         }
+        $customers1 = Customer::whereIn('id', $customers)->get();
+        return view('customers')->with('customers',$customers1);
+    }
+     public function glasses()
+    {
+        $products = Product::where('category','=','glasses')->groupBy('customer_id')->get();
+        $customers = [];
+        for($i = 0 ; $i < count($products) ; $i++)
+         {
+            array_push($customers,$products[$i]->customer_id);
+         }
+        $customers1 = Customer::whereIn('id', $customers)->get();
+        return view('customers')->with('customers',$customers1);
+    }
+     public function pants()
+    {
+        $products = Product::where('category','=','pants')->groupBy('customer_id')->get();
+        $customers = [];
+        for($i = 0 ; $i < count($products) ; $i++)
+         {
+            array_push($customers,$products[$i]->customer_id);
+         }
+        $customers1 = Customer::whereIn('id', $customers)->get();
+        return view('customers')->with('customers',$customers1);
+    }
+     public function bags()
+    {
+        $products = Product::where('category','=','bags')->groupBy('customer_id')->get();
+        $customers = [];
+        for($i = 0 ; $i < count($products) ; $i++)
+         {
+            array_push($customers,$products[$i]->customer_id);
+         }
+        $customers1 = Customer::whereIn('id', $customers)->get();
+        return view('customers')->with('customers',$customers1);
+    }
+    public function sourceeaasy()
+    {
+
+        $customers1 = Customer::where('company','=','sourceeasy')->get();
+        return view('customers')->with('customers',$customers1);
+    }
+    public function tripod()
+    {
+        $customers1 = Customer::where('company','=','tripod')->get();
+        return view('customers')->with('customers',$customers1);
+    }
+    public function mickey()
+    {
+        $customers1 = Customer::where('company','=','mickey')->get();
+        return view('customers')->with('customers',$customers1);
+    }
+     public function electronics1()
+    {
+        $products = Product::where('category','=','electronics')->groupBy('name')->get();
+        return view('products',compact('products'));
+    }
+     public function toys1()
+    {
+        $products = Product::where('category','=','toys')->groupBy('name')->get();
+        return view('products',compact('products'));
+    }
+     public function glasses1()
+    {
+        $products = Product::where('category','=','glasses')->groupBy('name')->get();
+        return view('products',compact('products'));
+    }
+     public function pants1()
+    {
+        $products = Product::where('category','=','pants')->groupBy('name')->get();
+        return view('products',compact('products'));
+    }
+     public function bags1()
+    {
+        $products = Product::where('category','=','bags')->groupBy('name')->get();
+        return view('products',compact('products'));
+    }
+
 }
