@@ -8,11 +8,11 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="/electronics1">Electronics</a></li>
-    <li><a href="/toys1">Toys</a></li>
-    <li><a href="/glasses1">Glasses</a></li>
-    <li><a href="/pants1">Pants</a></li>
-    <li><a href="/bags1">Bags</a></li>
+    <li><a href="/products1/electronics">Electronics</a></li>
+    <li><a href="/products1/toys">Toys</a></li>
+    <li><a href="/products1/glasses">Glasses</a></li>
+    <li><a href="/products1/pants">Pants</a></li>
+    <li><a href="/products1/bags">Bags</a></li>
     <li role="separator" class="divider"></li>
     <li><a href="/products">All</a></li>
   </ul>

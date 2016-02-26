@@ -51,18 +51,7 @@ Route::group(['middleware' => 'web'], function () {
 	Route::post('/updateProduct/{id}', 'AdminController@updateProduct');
 	Route::get('/deleteProduct/{id}', 'AdminController@deleteProduct');
 	Route::post('/createProdctForCustomer', 'AdminController@createProdctForCustomer');
-	Route::get('/electronics','AdminController@electronics');
-	Route::get('/toys','AdminController@toys');
-	Route::get('/glasses','AdminController@glasses');
-	Route::get('/pants','AdminController@pants');
-	Route::get('/bags','AdminController@bags');
-	Route::get('/sourceeaasy','AdminController@sourceeaasy');
-	Route::get('/tripod','AdminController@tripod');
-	Route::get('/mickey','AdminController@mickey');
-	Route::get('/electronics1','AdminController@electronics1');
-	Route::get('/toys1','AdminController@toys1');
-	Route::get('/glasses1','AdminController@glasses1');
-	Route::get('/pants1','AdminController@pants1');
-	Route::get('/bags1','AdminController@bags1');
-	// createProdct
+	Route::get('/category/{id}','AdminController@category');
+	Route::get('/company/{id}','AdminController@company');
+	Route::get('/products1/{id}','AdminController@products1');
 });

@@ -7,11 +7,11 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="/electronics">customers who buy Electronics</a></li>
-    <li><a href="/toys">customers who buy  Toys</a></li>
-    <li><a href="/glasses">customers who buy  Glasses</a></li>
-    <li><a href="/pants">customers who buy  Pants</a></li>
-    <li><a href="/bags">customers who buy  Bags</a></li>
+    <li><a href="/category/electronics">customers who buy Electronics</a></li>
+    <li><a href="/category/toys">customers who buy  Toys</a></li>
+    <li><a href="/category/glasses">customers who buy  Glasses</a></li>
+    <li><a href="/category/pants">customers who buy  Pants</a></li>
+    <li><a href="/category/bags">customers who buy  Bags</a></li>
     <li role="separator" class="divider"></li>
     <li><a href="/customer">All</a></li>
   </ul>
@@ -22,9 +22,9 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="/sourceeaasy">Sourceeasy</a></li>
-    <li><a href="/tripod">Tripod</a></li>
-    <li><a href="/mickey">Mickey</a></li>
+    <li><a href="/company/sourceeasy">Sourceeasy</a></li>
+    <li><a href="/company/tripod">Tripod</a></li>
+    <li><a href="/company/mickey">Mickey</a></li>
   </ul>
 </div>
 
