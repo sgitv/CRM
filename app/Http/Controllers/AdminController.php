@@ -96,7 +96,7 @@ class AdminController extends Controller
         return view('editProduct', compact('editProduct'));
         
     }
-    
+
     public function updateProduct($id)
     {
         $updateProduct = [
@@ -153,6 +153,21 @@ class AdminController extends Controller
     {
         $products = Product::where('category','=',$id)->groupBy('name')->get();
         return view('products',compact('products'));
+    }
+
+
+    public function regular()
+    {
+        $products = Product::where('created_at','>','2016-02-24')->get();
+        $customers = [];
+        for($i = 0 ; $i < count($products) ; $i++)
+         {
+            array_push($customers,$products[$i]->customer_id);
+            // echo $customers[$i];
+         }
+        $customers1 = Customer::whereIn('id', $customers)->get();
+        // echo $customers1;
+        return view('customers')->with('customers',$customers1);
     }
 
 }

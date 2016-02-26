@@ -54,4 +54,5 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/category/{id}','AdminController@category');
 	Route::get('/company/{id}','AdminController@company');
 	Route::get('/products1/{id}','AdminController@products1');
+	Route::get('/regular','AdminController@regular');
 });
