@@ -35,6 +35,7 @@
 <table class="table">
 	<tr>
 	<th>Product Id</th>
+  
 	<th>Name</th>
 	<th>Price /-</th>
     <th>Caregory</th>
@@ -45,6 +46,7 @@
 	@foreach($products as $product)
     <tr>
     	<td style = "text-align:center">{{ $product->id}}</td>
+
     	<td>{{ $product->name }}</td>
     	<td>{{ $product->price}}</td>
         <td>{{ $product->category}}</td>

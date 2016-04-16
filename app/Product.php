@@ -12,4 +12,8 @@ class Product extends Model
    		'price',
    		'category',
    ]; 
+ //   public function sid()
+	// {
+	// 	return $this->hasMany('App\Customer');
+	// }
 }

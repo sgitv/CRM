@@ -39,7 +39,7 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('admin',function(){
 		echo "hi";
 	})->middleware('isAdmin');
-	Route::get('/customer','AdminController@customer');
+	Route::get('/customers','AdminController@customer');
 	Route::get('/products','AdminController@products');
 	Route::get('/edit/{id}', 'AdminController@edit');	
 	Route::get('/pro/{id}', 'AdminController@pro');
@@ -55,4 +55,6 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/company/{id}','AdminController@company');
 	Route::get('/products1/{id}','AdminController@products1');
 	Route::get('/regular','AdminController@regular');
+	Route::get('/getCost','AdminController@getCost');
+	Route::get('/demo','AdminController@demo');
 });

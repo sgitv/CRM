@@ -169,5 +169,14 @@ class AdminController extends Controller
         // echo $customers1;
         return view('customers')->with('customers',$customers1);
     }
+    public function getCost()
+    {
+        $cost = Product::where('price','=',max());
+        echo $cost;
+    }
+    public function demo()
+    {
+        echo "controller";
+    }
 
 }

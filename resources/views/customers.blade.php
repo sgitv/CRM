@@ -24,7 +24,7 @@
                 <li><a href="/category/pants">Pants</a></li>
                 <li><a href="/category/bags">Bags</a></li>
                 <li role="separator" class="divider"></li>              
-                <li><a href="/customer">display All</a></li>
+                <li><a href="/customers">display All</a></li>
               </ul>
             </li>
             <li class="dropdown">
@@ -33,7 +33,7 @@
                 <li><a href="/company/sourceeasy">Sourceeasy</a></li>
                 <li><a href="/company/tripod">Tripod</a></li>
                 <li><a href="/company/mickey">Mickey</a></li>                
-                <li><a href="/customer">display All</a></li>
+                <li><a href="/customers">display All</a></li>
               </ul>
             </li>
           </ul>
